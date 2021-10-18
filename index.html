@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kasir</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	 <style>
+	 body{
+		width: 100%;
+		background: #fcfcfc;
+	} #tampil img{
+
+		display: inline-block;
+		margin-left: 5px;
+		height: 200px;
+		width: 200px;
+	} #tampil button{
+		border-radius: 30px;
+		height: 30px;
+		width: 100px;
+	}#tampil input{
+		margin-left: 20px;
+	}
+	.container{
+		width: 80%;
+		margin-left: 7%;
+		background-color: #ffff;
+		
+		
+	}.header{
+			height: 70px;
+			color: white;
+			margin-bottom: 15px;
+			background: green;
+			text-align:center;
+
+
+	}.header ul li{
+			list-style: none;
+			display: inline-block;
+			padding-top: 20px;
+			font-size: 25px;
+			text-shadow: 2px 1px 1px black;
+			margin-left: -40px;
+			
+	}#tes {
+			float: left;
+			font-size: 23px;
+			color: gold;
+			padding-top: 0px;
+			margin-left: 20px;
+	}#tes:hover { cursor: pointer;  }
+	.nav{
+			width: 100px;
+			height: 30px;
+			display: inline-block;
+			margin-left: 10px;
+			text-align: center;
+	}.nav hr{ 
+			height: 2px; background: #eaeaea;
+	}.nav:hover, button{  cursor: pointer; }
+	.nav button{
+		border: none; background-color: white;
+	}.footer{
+		width: 80%;
+		margin-left: 7%;
+		margin-top: -17px;
+		height: 70px;
+		background: green;
+		text-align: center;	
+	}
+	</style>
+	
+
+
+</head>
+<body >
+	<div class="container">
+		
+		<div class="header">
+			<ul>
+				<li id="tes"><img src="logo 2.png" width="70" height="70px;" ></li>
+				<li>Selamat Datang</li>
+			</ul>
+		</div>
+		
+	
+				<div class="nav">
+					<button onclick="showPage(1)"><h3 style="margin-bottom: 2px;" >Home</h3></button>
+					<hr>
+				</div>
+				<div class="nav">
+					<button  onclick="showPage(2)"><h3 style="margin-bottom: 2px;">Gallery</h3></button>
+					<hr>
+				</div>
+				<div class="nav">
+					<button  onclick="showPage(3)"><h3 style="margin-bottom: 2px;">Login</h3></button>
+					<hr>
+				</div>
+			
+				<div id="tampil" style="margin-left: 20px; margin-top: 20px; display: block;" ></div>
+			</div>
+	
+	<div class="footer" style="margin-top: 100px;">
+			<h3 style="padding-top: 25px; color: white; text-shadow: 2px 1px 1px black;">Copyright@ahyar</h3>
+	</div>
+
+
+	<script type="text/javascript">
+		function showPage(page){
+	var div = document.getElementById('tampil');
+	var isi = '';
+	if(page==1){
+		isi+='<h3 style="text-align:center;">Artikel</h3>';
+		for(var a=0; a<3; a++){
+			isi+="<h5> Artikel  "+(a+1)+"  </h5>";
+			isi+='<p>Nusa Tenggara Barat (disingkat NTB) ialah sebuah provinsi di Indonesia yang berada pada bagian barat Kepulauan Nusa Tenggara.</p>';
+			isi+='<p>Provinsi ini beribu kota di Mataram dan memiliki 10 Kabupaten dan 2 Kota, termasuk kota Mataram. Jumlah penduduk Nusa Tenggara Barat.</p>';
+		}
+		
+	}else if(page==2){
+			isi+='<center>';
+			isi+='<img src="ac.jpg"> <br>';
+			isi+='<img src="aj.jpg">';
+			isi+='<img src="al.jpg">';
+			isi+='<img src="ao.jpg">';
+			isi+='</center>';
+	} else{
+		isi+='<center>';
+		isi+='<label for="username">Username</label> : ';
+		isi+='<input type="text" id="username"  value="username"> <br><br>';
+		isi+='<label for="password">Password</label> :'
+		isi+='<input type="password" id="password" value="password"><br><br>';
+		isi+='<button >masuk</button>';
+		isi+='</center>'
+	}
+
+	div.innerHTML = isi;
+}
+	</script>
+</body>
+</html>
+
